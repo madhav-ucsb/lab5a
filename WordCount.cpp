@@ -27,7 +27,7 @@ int WordCount::getTotalWords() const {
   int count = 0;
   for(int i = 0; i<100;i++)
     {
-      for(int j = 0; j<table[i].size(); j++)
+      for(int j = 0; j<(int) table[i].size(); j++)
       {
         count = count + (int) table[i].at(j).second;
           
@@ -43,7 +43,7 @@ int WordCount::getNumUniqueWords() const {
 
   for(int i = 0; i<100; i++)
     {
-      count = count + table[i].size();
+      count = count +(int) table[i].size();
     }
   
 
@@ -200,7 +200,7 @@ std::string WordCount::makeValidWord(const std::string & word) {
     }
     else
     {
-      if (s.size()==1)
+      if ((s.size()==1)
       {
         return "";
       }
