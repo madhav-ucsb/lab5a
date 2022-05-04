@@ -54,6 +54,21 @@ int main()
   cout<<f.getWordCount("be")<<endl;
 
 
+  f.incrWordCount("eb");
+
+
+  cout<<f.getWordCount("eb")<<endl;
+
+  cout<<f.getNumUniqueWords()<<endl;
+
+  jfi = f.decrWordCount("eb");
+
+
+  cout<<jfi<<endl;
+
+
+
+
 
   
   

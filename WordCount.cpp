@@ -61,7 +61,7 @@ int WordCount::getWordCount(const std::string & word) const {
   int count = 0;
   bool inside = false;
 
-  for(int i = 0; (i<table[h].size()&&!inside); i++)
+  for(int i = 0; (i<(int) table[h].size()&&!inside); i++)
     {
       if(table[h].at(i).first==s)
       {
@@ -82,7 +82,7 @@ int WordCount::incrWordCount(const std::string & word) {
   int h = (int) hash(s);
   bool inside = false;
 
-  for(int i = 0; (i<table[h].size()&&!inside); i++)
+  for(int i = 0; (i<(int) table[h].size()&&!inside); i++)
     {
       if(table[h].at(i).first==s)
       {
@@ -115,7 +115,7 @@ int WordCount::decrWordCount(const std::string & word) {
   int h = (int) hash(s);
   bool inside = false;
 
-  for(int i = 0; (i<table[h].size()&&!inside); i++)
+  for(int i = 0; (i<(int) table[h].size()&&!inside); i++)
     {
       if(table[h].at(i).first==s)
       {
@@ -150,7 +150,7 @@ std::string WordCount::makeValidWord(const std::string & word) {
 
   std::string f = "-''";
 
-  for(int i = 0; i<word.size() ; i++)
+  for(int i = 0; i<(int) word.size() ; i++)
     {
       char c = word.at(i);
       char hyphen = f.at(1);
@@ -165,7 +165,7 @@ std::string WordCount::makeValidWord(const std::string & word) {
 
   bool startsAlpha = false;
 
-  int size = s.size();
+  int size = (int) s.size();
   if(size==0)
   {
     return "";
@@ -185,7 +185,7 @@ std::string WordCount::makeValidWord(const std::string & word) {
   }
   bool endsAlpha = false;
 
-  size = s.size();
+  size = (int) s.size();
 
   if(size==0)
   {
