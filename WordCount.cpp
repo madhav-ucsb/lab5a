@@ -200,7 +200,7 @@ std::string WordCount::makeValidWord(const std::string & word) {
     }
     else
     {
-      if ((s.size()==1)
+      if (s.size()==1)
       {
         return "";
       }
