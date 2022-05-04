@@ -88,7 +88,7 @@ int WordCount::incrWordCount(const std::string & word) {
       {
         table[h].at(i).second = table[h].at(i).second + 1;
         
-        return table[h].at(i).second + 1;
+        return table[h].at(i).second;
       }
       
     }
