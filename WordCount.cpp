@@ -79,6 +79,11 @@ int WordCount::incrWordCount(const std::string & word) {
 	// STUB
 	std::string s = makeValidWord(word);
 
+
+  if(s=="")
+  {
+    return 0;
+  }
   int h = (int) hash(s);
   bool inside = false;
 
